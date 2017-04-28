@@ -12,9 +12,9 @@ import { SearchComponent } from './search-component/search.component';
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
-    NativeScriptHttpModule,
-    NativeScriptRouterModule,
-    NativeScriptRouterModule.forRoot(routes)
+   NativeScriptHttpModule,
+   NativeScriptRouterModule,
+  NativeScriptRouterModule.forRoot(routes)
   ],
   declarations: [AppComponent, SearchComponent],
   bootstrap: [AppComponent],
