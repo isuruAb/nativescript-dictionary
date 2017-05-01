@@ -1,7 +1,11 @@
+
 .search-bar{
     background-color: #E3F2FD;
     padding: 12px 10px;
 }
 .small-spacing{
     padding: 11px 10px;
+}
+.row-height{
+    min-height: 50px !important;
 }

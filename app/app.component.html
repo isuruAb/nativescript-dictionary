@@ -1,3 +1,19 @@
 <ActionBar title="Glossary" class="action-bar"></ActionBar>
+<GridLayout rows="auto, *">
 
-<page-router-outlet></page-router-outlet>
+    <GridLayout row="0" columns="*, auto" class="search-bar">
+        <TextField #groceryTextField hint="Enter a word" col="0" [text]="wordSnippet" [(ngModel)]="wordSnippet" (ngModelChange)="wordSnippet=search()"></TextField>
+        <Image src="res://ic_search" col="1" (tap)="search()"></Image>
+
+    </GridLayout>
+
+    <ListView [items]="_meaningArray" row="1">
+        
+            <ng-template let-item="item" >
+                <Label [text]="item.sinhala" class="small-spacing"></Label>
+            </ng-template>
+        
+    </ListView>
+
+</GridLayout>
+<!--<page-router-outlet></page-router-outlet>-->

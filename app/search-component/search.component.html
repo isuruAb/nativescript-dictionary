@@ -1,1 +1,18 @@
-<Label text="search Here" class="small-spacing"></Label>
+<!-- Your UI components go here -->
+<GridLayout rows="auto, *">
+
+    <GridLayout row="0" columns="*, auto" class="search-bar">
+        <TextField #groceryTextField hint="Enter a word" col="0" [text]="wordSnippet" [(ngModel)]="wordSnippet" (ngModelChange)="wordSnippet=search()"></TextField>
+        <Image col="1" (tap)="search()"></Image>
+
+    </GridLayout>
+    <StackLayout row="1">
+        <ListView [items]="_meaningArray" >
+
+            <ng-template let-item="item" class="row-height">
+                <Label [text]="item.sinhala" class="small-spacing"></Label>
+            </ng-template>
+
+        </ListView>
+    </StackLayout>
+</GridLayout>
